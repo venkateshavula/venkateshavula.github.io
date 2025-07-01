@@ -9,9 +9,9 @@ title: Venkatesh Avula
 
 ## 🔗 Links
 
-- <i class="fab fa-linkedin"></i> [LinkedIn](https://www.linkedin.com/)
-- <i class="fab fa-github"></i> [GitHub](https://github.com/)
-- <i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/)
+<i class="fab fa-linkedin"></i> [LinkedIn](https://www.linkedin.com/)
+<i class="fab fa-github"></i> [GitHub](https://github.com/)
+<i class="fas fa-graduation-cap"></i> [Google Scholar](https://scholar.google.com/)
 
 ---
 
