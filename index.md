@@ -7,8 +7,6 @@ title: Venkatesh Avula
 
 **Lead Data Scientist | Generative AI | Applied ML | Healthcare AI**
 
-Philadelphia, USA  
-📧 venkateshavula87@gmail.com • 📱 408-621-9965  
 [LinkedIn](https://www.linkedin.com/) • [GitHub](https://github.com/) • [Google Scholar](https://scholar.google.com/)
 
 ---
@@ -55,8 +53,4 @@ _TBD – you can link to any papers or talks here later_
 
 ---
 
-## 📫 Contact
 
-If you're working on healthcare AI, GenAI evaluation, or applied ML systems and want to collaborate — feel free to reach out!
-
-📧 venkateshavula87@gmail.com
