@@ -8,13 +8,13 @@ title: Venkatesh Avula
 **Lead Data Scientist | Generative AI | Applied ML | Healthcare AI**
 
 <div style="font-size: 1.5rem;">
-  <a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="margin-right: 15px;">
+  <a href="https://www.linkedin.com/in/venkateshavula87/" target="_blank" style="margin-right: 20px;">
     <i class="fab fa-linkedin"></i>
   </a>
-  <a href="https://github.com/yourusername" target="_blank" style="margin-right: 15px;">
+  <a href="https://github.com/venkateshavula" target="_blank" style="margin-right: 20px;">
     <i class="fab fa-github"></i>
   </a>
-  <a href="https://scholar.google.com/yourprofile" target="_blank" style="margin-right: 15px;">
+  <a href="https://scholar.google.com/citations?user=_Xw7DBUAAAAJ&hl=en" target="_blank" style="margin-right: 20px;">
     <i class="fas fa-graduation-cap"></i>
   </a>
 </div>
