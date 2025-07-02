@@ -122,24 +122,11 @@
     .icon-bullet i {
       flex-shrink: 0;
       margin-top: 0.2rem;
-      color: #555;
+      color: #444;
     }
 
     .icon-lg {
-      font-size: 1.2rem;
-    }
-
-    .icon-xl {
-      font-size: 1.4rem;
-      color: #333;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
     }
 
     .pub-title {
@@ -181,44 +168,55 @@
       <div class="grid-2">
         <!-- Interests Left -->
         <div id="interests">
-          <h3><i class="fas fa-book icon-xl"></i> Interests</h3>
-          <div class="icon-bullet"><i class="fas fa-circle-dot icon-lg"></i> Health‑tech & AI integration</div>
-          <div class="icon-bullet"><i class="fas fa-circle-dot icon-lg"></i> Model interpretability / explainability</div>
-          <div class="icon-bullet"><i class="fas fa-circle-dot icon-lg"></i> Generative AI in clinical support</div>
+          <h3>Interests</h3>
+          <div class="icon-bullet"><i class="fas fa-book icon-lg"></i> Health‑tech & AI integration</div>
+          <div class="icon-bullet"><i class="fas fa-book icon-lg"></i> Model interpretability / explainability</div>
+          <div class="icon-bullet"><i class="fas fa-book icon-lg"></i> Generative AI in clinical support</div>
         </div>
 
         <!-- Education Right -->
         <div id="education">
-          <h3><i class="fas fa-graduation-cap icon-xl"></i> Education</h3>
-          <div class="icon-bullet"><i class="fas fa-circle-dot icon-lg"></i> <strong>M.S. in [Field]</strong>, [University], [Year]</div>
-          <div class="icon-bullet"><i class="fas fa-circle-dot icon-lg"></i> <strong>B.S. in [Field]</strong>, [University], [Year]</div>
+          <h3>Education</h3>
+          <div class="icon-bullet"><i class="fas fa-graduation-cap icon-lg"></i> <strong>M.S. in [Field]</strong>, [University], [Year]</div>
+          <div class="icon-bullet"><i class="fas fa-graduation-cap icon-lg"></i> <strong>B.S. in [Field]</strong>, [University], [Year]</div>
         </div>
       </div>
     </section>
 
     <!-- Publications -->
     <section id="research">
-      <h2><i class="fas fa-paperclip icon-lg"></i> Research & Publications</h2>
-      <ul>
-        <li>
+      <h2>Research & Publications</h2>
+      <div class="icon-bullet">
+        <i class="fas fa-paperclip icon-lg"></i>
+        <div>
           <span class="pub-title">AutoEval: Framework for Multi-Dimensional LLM Evaluation in Healthcare</span><br />
           Work in progress · internal research at Elsevier Health AI
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="icon-bullet">
+        <i class="fas fa-paperclip icon-lg"></i>
+        <div>
           <span class="pub-title">Explainable Risk Scoring for EHR-based Triage</span><br />
           Poster · HIMSS AI Showcase 2024
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-      <h2><i class="fas fa-table icon-lg"></i> Projects</h2>
-      <ul>
-        <li><strong>SME-labeled Eval Pipeline</strong> – Automated evaluation for LLM outputs using Likert-scale annotated datasets.</li>
-        <li><strong>DSPy-based Prompt Optimization</strong> – Prompt refinement using labeled data and test-train split setup.</li>
-        <li><strong>Healthcare GenAI Assistant</strong> – Internal assistant for clinical Q&A, backed by structured knowledge and retrieval.</li>
-      </ul>
+      <h2>Projects</h2>
+      <div class="icon-bullet">
+        <i class="fas fa-table icon-lg"></i>
+        <div><strong>SME-labeled Eval Pipeline</strong> – Automated evaluation for LLM outputs using Likert-scale annotated datasets.</div>
+      </div>
+      <div class="icon-bullet">
+        <i class="fas fa-table icon-lg"></i>
+        <div><strong>DSPy-based Prompt Optimization</strong> – Prompt refinement using labeled data and test-train split setup.</div>
+      </div>
+      <div class="icon-bullet">
+        <i class="fas fa-table icon-lg"></i>
+        <div><strong>Healthcare GenAI Assistant</strong> – Internal assistant for clinical Q&A, backed by structured knowledge and retrieval.</div>
+      </div>
     </section>
   </div>
 </body>
