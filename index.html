@@ -7,145 +7,128 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #fefefe;
       color: #222;
       display: flex;
     }
-
-    /* Left nav */
     nav {
       width: 72px;
       background: #f5f5f5;
-      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
       border-right: 1px solid #ddd;
       height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-
     nav a {
       color: #444;
-      font-size: 1.5rem;
-      margin: 1.2rem 0;
+      font-size: 1.6rem;
+      margin: 1rem 0;
       text-decoration: none;
-      transition: color 0.2s ease-in-out;
+      transition: color 0.2s;
     }
-
     nav a:hover {
       color: #0073b1;
     }
-
-    /* Main content */
     .container {
       margin-left: 72px;
       padding: 3rem;
       max-width: 900px;
-      width: 100%;
     }
-
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.25rem;
+      margin: 0 0 0.5rem;
     }
-
     .subtitle {
       font-size: 1.25rem;
       font-weight: 500;
       color: #555;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
-
     section {
       margin-bottom: 3rem;
     }
-
-    section h2 {
+    h2 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
-      color: #333;
       border-bottom: 1px solid #ddd;
       padding-bottom: 0.25rem;
     }
-
     p {
       line-height: 1.6;
       margin-bottom: 1rem;
-      max-width: 750px;
     }
-
+    .grid-2 {
+      display: flex;
+      gap: 2rem;
+    }
+    .grid-2 > div {
+      flex: 1;
+    }
     ul {
       padding-left: 1.2rem;
     }
-
     li {
       margin-bottom: 0.6rem;
     }
-
-    a.inline-link {
-      color: #0073b1;
-      text-decoration: none;
-    }
-
-    a.inline-link:hover {
-      text-decoration: underline;
-    }
-
     .pub-title {
       font-weight: 600;
     }
-
-    .contact-links a {
-      margin-right: 1.5rem;
-      font-size: 1.25rem;
-      color: #444;
-      text-decoration: none;
-    }
-
-    .contact-links a:hover {
-      color: #0073b1;
-    }
   </style>
 </head>
-
 <body>
-  <!-- Left vertical icon navbar -->
+  <!-- Left nav with GitHub, LinkedIn, Scholar + Email -->
   <nav>
+    <a href="mailto:youremail@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
     <a href="https://github.com/venkateshavula" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
     <a href="https://linkedin.com/in/venkateshavula" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://scholar.google.com/citations?user=_Xw7DBUAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    <a href="https://scholar.google.com/citations?user=your_id" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
   </nav>
 
-  <!-- Main content -->
   <div class="container">
     <h1>Venkatesh Avula</h1>
     <div class="subtitle">Data Scientist | Healthcare AI | NLP &amp; GenAI</div>
 
+    <!-- About Section -->
     <section id="about">
       <h2>About</h2>
       <p>
         I’m a data scientist working in U.S. healthcare, applying AI to solve real-world problems in clinical workflows. My work spans classification, NLP, and generative AI — with a focus on model evaluation, safety, and automation.
       </p>
-      <p>
-        I’m currently building auto-evaluation pipelines using SME-labeled data, grounded metrics, and generative models. I care about high-integrity AI in regulated domains.
-      </p>
+      <div class="grid-2">
+        <!-- Education Column -->
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li><strong>M.S. in [Field]</strong>, [University], [Year]</li>
+            <li><strong>B.S. in [Field]</strong>, [University], [Year]</li>
+          </ul>
+        </div>
+        <!-- Interests Column -->
+        <div>
+          <h3>Interests</h3>
+          <ul>
+            <li>Health‑tech & AI integration</li>
+            <li>Model interpretability / explainability</li>
+            <li>Generative AI in clinical support</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
+    <!-- Research & Publications -->
     <section id="research">
       <h2>Research & Publications</h2>
       <ul>
         <li>
           <span class="pub-title">AutoEval: Framework for Multi-Dimensional LLM Evaluation in Healthcare</span><br />
-          <em>Work in progress</em> · internal research at Elsevier Health AI
+          Work in progress · internal research at Elsevier Health AI
         </li>
         <li>
           <span class="pub-title">Explainable Risk Scoring for EHR-based Triage</span><br />
@@ -154,28 +137,14 @@
       </ul>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
       <ul>
-        <li>
-          <span class="pub-title">SME-labeled Eval Pipeline</span> – Automated evaluation for LLM outputs using Likert-scale annotated datasets.
-        </li>
-        <li>
-          <span class="pub-title">DSPy-based Prompt Optimization</span> – Prompt refinement using labeled data and test-train split setup.
-        </li>
-        <li>
-          <span class="pub-title">Healthcare GenAI Assistant</span> – Internal assistant for clinical Q&A, backed by structured knowledge and retrieval.
-        </li>
+        <li><strong>SME-labeled Eval Pipeline</strong> – Automated evaluation for LLM outputs using Likert-scale annotated datasets.</li>
+        <li><strong>DSPy-based Prompt Optimization</strong> – Prompt refinement using labeled data and test-train split setup.</li>
+        <li><strong>Healthcare GenAI Assistant</strong> – Internal assistant for clinical Q&A, backed by structured knowledge and retrieval.</li>
       </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:venkateshavula87@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://linkedin.com/in/venkateshavula" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/venkateshavula" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      </div>
     </section>
   </div>
 </body>
