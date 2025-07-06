@@ -1,391 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Venkatesh Avula</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #222;
-      display: flex;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Venkatesh Avula</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        color: #222;
+        display: flex;
+      }
 
-    nav.sidebar {
-      width: 72px;
-      background: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 0;
-      border-right: 1px solid #ddd;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
+      nav.sidebar {
+        width: 72px;
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        border-right: 1px solid #ddd;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
 
-    nav.sidebar a {
-      color: #444;
-      font-size: 1.6rem;
-      margin: 1rem 0;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+      nav.sidebar a {
+        color: #444;
+        font-size: 1.6rem;
+        margin: 1rem 0;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
 
-    nav.sidebar a:hover {
-      color: #0073b1;
-    }
+      nav.sidebar a:hover {
+        color: #0073b1;
+      }
 
-    .container {
-      margin-left: 72px;
-      padding: 3rem;
-      max-width: 900px;
-      width: 100%;
-    }
+      .container {
+        margin-left: 72px;
+        padding: 3rem;
+        max-width: 900px;
+        width: 100%;
+      }
 
-    header.topnav {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      z-index: 5;
-      padding: 1rem 0;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 2rem;
-    }
+      header.topnav {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        z-index: 5;
+        padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2rem;
+      }
 
-    .topnav a {
-      margin-right: 1.5rem;
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
+      .topnav a {
+        margin-right: 1.5rem;
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
 
-    .topnav a:hover {
-      color: #0073b1;
-    }
+      .topnav a:hover {
+        color: #0073b1;
+      }
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem;
-    }
+      h1 {
+        font-size: 2.5rem;
+        margin: 0 0 0.5rem;
+      }
 
-    .subtitle {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 2rem;
-    }
+      .subtitle {
+        font-size: 1rem; /* Adjusted font size to fit into a single line */
+        font-weight: 500;
+        color: #555;
+        margin-bottom: 2rem;
+      }
 
-    section {
-      margin-bottom: 3rem;
-    }
+      section {
+        margin-bottom: 3rem;
+      }
 
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 0.25rem;
-    }
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.25rem;
+      }
 
-    h3 {
-      font-size: 1.1rem;
-      margin: 1rem 0 0.5rem;
-    }
+      h3 {
+        font-size: 1.1rem;
+        margin: 1rem 0 0.5rem;
+      }
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
 
-    .grid-2 {
-      display: flex;
-      gap: 2rem;
-    }
+      .grid-2 {
+        display: flex;
+        gap: 2rem;
+      }
 
-    .grid-2 > div {
-      flex: 1;
-    }
+      .grid-2 > div {
+        flex: 1;
+      }
 
-    .icon-bullet {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      margin-bottom: 0.8rem;
-    }
+      .icon-bullet {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.8rem;
+      }
 
-    .icon-bullet i {
-      flex-shrink: 0;
-      margin-top: 0.2rem;
-      color: #444;
-    }
+      .icon-bullet i {
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+        color: #444;
+      }
 
-    .icon-lg {
-      font-size: 1.1rem;
-    }
+      .icon-lg {
+        font-size: 1.1rem;
+      }
 
-    .pub-title {
-      font-weight: 600;
-    }
+      .pub-title {
+        font-weight: 600;
+      }
 
-    a.pub-title {
-      color: blue;
-      text-decoration: none;
-      font-weight: 600;
-    }
+      a.pub-title {
+        color: blue;
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-    a.pub-title:hover {
-      text-decoration: underline;
-    }
+      a.pub-title:hover {
+        text-decoration: underline;
+      }
 
-    .job-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #222;
-      margin-bottom: 0.1rem;
-    }
+      .job-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 0.1rem;
+      }
 
-    .job-description {
-      font-size: 0.85rem; /* Reduced font size */
-      color: #333;
-      line-height: 1.6;
-      text-align: justify; /* Justify the paragraph */
-    }
+      .job-description {
+        font-size: 0.85rem; /* Reduced font size */
+        color: #333;
+        line-height: 1.6;
+        text-align: justify; /* Justify the paragraph */
+      }
 
-    .job-location {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 0.1rem; /* Adjust spacing below the location */
-    }
+      .job-location {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 0.1rem; /* Adjust spacing below the location */
+      }
 
-    .job-timeline {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 0.5rem; /* Adjust spacing below the location */
-    }
-  </style>
-</head>
-<body>
-  <!-- Sidebar -->
-  <nav class="sidebar">
-    <a href="mailto:youremail@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com/venkateshavula" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/venkateshavula" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://scholar.google.com/citations?user=your_id" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-  </nav>
+      .job-timeline {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 0.5rem; /* Adjust spacing below the location */
+      }
 
-  <!-- Main Content -->
-  <div class="container">
-    <!-- Top Navigation -->
-    <header class="topnav">
-      <a href="#about">About</a>
-      <a href="#interests">Interests</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#research">Publications</a>
-      <a href="#projects">Projects</a>
-    </header>
+      #about p {
+        font-size: 1rem; /* Adjusted font size */
+        text-align: justify; /* Justify the content */
+        margin-bottom: 1.5rem; /* Add spacing between paragraphs */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <a href="mailto:youremail@example.com" aria-label="Email"
+        ><i class="fas fa-envelope"></i
+      ></a>
+      <a
+        href="https://github.com/venkateshavula"
+        target="_blank"
+        aria-label="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://linkedin.com/in/venkateshavula"
+        target="_blank"
+        aria-label="LinkedIn"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a
+        href="https://scholar.google.com/citations?user=your_id"
+        target="_blank"
+        aria-label="Google Scholar"
+        ><i class="fas fa-graduation-cap"></i
+      ></a>
+    </nav>
 
-    <!-- Name + Tagline -->
-    <h1>Venkatesh Avula</h1>
-    <div class="subtitle">Data Scientist | Healthcare AI | NLP &amp; GenAI</div>
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Top Navigation -->
+      <header class="topnav">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Publications</a>
+      </header>
 
-    <!-- About -->
-    <section id="about">
-      <!-- <h2>About</h2> -->
-      <p>
-        I’m a data scientist working in U.S. healthcare, applying AI to solve real-world problems in clinical workflows. My work spans classification, NLP, and generative AI — with a focus on model evaluation, safety, and automation.
-      </p>
+      <!-- Name + Tagline -->
+      <h1>Venkatesh Avula</h1>
+      <div class="subtitle">
+        Data Scientist | GenAI &amp; ML Specialist | Applied AI Research
+      </div>
+
+      <!-- About -->
+      <section id="about">
+        <!-- <h2>About</h2> -->
+        <p>
+          Seasoned Data Scientist with 15+ years of experience driving
+          real-world impact through AI. Currently lead the evaluation of GenAI
+          products, ensuring safe, reliable, and scalable deployment of AI
+          across the organization. Known for translating complex AI systems into
+          actionable, high-value outcomes through strong cross-functional
+          leadership.
+        </p>
+        <p>
+          Previously led end-to-end development of predictive models in
+          healthcare and finance, enabling early disease detection, operational
+          efficiency, and risk management at scale. Committed to advancing
+          applied AI through rigorous evaluation, research, and collaboration —
+          with multiple peer-reviewed publications and a passion for building AI
+          that works in the real world.
+        </p>
+      </section>
 
       <div class="grid-2">
-  <!-- Interests Left -->
-  <div id="interests">
-    <h2>Interests</h2>
-    <ul style="list-style: none; padding-left: .7rem; margin-top: 0.5rem;">
-      <li style="margin-bottom: 10px;">
-        <i class="fas fa-book" style="font-size: 0.9rem; width: 12px; margin-right: 2px;"></i>
-        <span style="font-size: 0.9rem;">Health‑tech & AI integration</span>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <i class="fas fa-book" style="font-size: 0.9rem; width: 12px; margin-right: 2px;"></i>
-        <span style="font-size: 0.9rem;">Model interpretability / explainability</span>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <i class="fas fa-book" style="font-size: 0.9rem; width: 12px; margin-right: 2px;"></i>
-        <span style="font-size: 0.9rem;">Generative AI in clinical support</span>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Education Right -->
-  <div id="education">
-    <h2>Education</h2>
-    <ul style="list-style: none; padding-left: 0.7rem; margin-top: 0.5rem;">
-      <li style="margin-bottom: 10px;">
-        <i class="fas fa-graduation-cap" style="font-size: 0.9rem; float: left; margin-top: 3px; margin-right: 8px;"></i>
-        <div style="margin-left: 24px;">
-          <div style="font-size: 0.95rem; color: #000;"><strong>Masters in Management and Information Systems, 2013–2014</strong></div>
-          <div style="font-size: 0.9rem; color: #777;">Oklahoma State University, Stillwater, OK</div>
+        <!-- Interests Left -->
+        <div id="interests">
+          <h2>Interests</h2>
+          <ul
+            style="list-style: none; padding-left: 0.7rem; margin-top: 0.5rem"
+          >
+            <li style="margin-bottom: 10px">
+              <i
+                class="fas fa-book"
+                style="font-size: 0.9rem; width: 12px; margin-right: 2px"
+              ></i>
+              <span style="font-size: 0.9rem"
+                >Health‑tech & AI integration</span
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <i
+                class="fas fa-book"
+                style="font-size: 0.9rem; width: 12px; margin-right: 2px"
+              ></i>
+              <span style="font-size: 0.9rem"
+                >Model interpretability / explainability</span
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <i
+                class="fas fa-book"
+                style="font-size: 0.9rem; width: 12px; margin-right: 2px"
+              ></i>
+              <span style="font-size: 0.9rem"
+                >Generative AI in clinical support</span
+              >
+            </li>
+          </ul>
         </div>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <i class="fas fa-graduation-cap" style="font-size: 0.9rem; float: left; margin-top: 3px; margin-right: 8px;"></i>
-        <div style="margin-left: 24px;">
-          <div style="font-size: 0.95rem; color: #000;"><strong>Bachelor of Technology in Mechanical Engineering, 2005–2009</strong></div>
-          <div style="font-size: 0.9rem; color: #777;">JNTU College of Engineering, Anantapur, India</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 
-    <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="icon-bullet">
-        <i class="fas fa-briefcase icon-lg"></i>
-        <div>
-          <div class="job-title">LEAD DATA SCIENTIST </div>
-          <div class="job-location">Geisinger Medical Center, Danville, Pennsylvania</div>
-          <div class="job-timeline">FEB 2018 – CURRENT</div>
-          <div class="job-description">
-            At Geisinger, I led the evaluation of internal and external GenAI products by building end-to-end human-in-the-loop and automated assessment pipelines to safely and accurately measure AI capabilities at scale. Worked with large-scale EHRs, imaging, and clinical notes to develop predictive models for early detection of critical conditions, advancing precision health. Drove applied research, cross-system collaborations, and operational model deployment with feedback loops to address drift and improve performance. Published in peer-reviewed journals to advance the field of AI through applied research and real-world impact.
+        <!-- Education Right -->
+        <div id="education">
+          <h2>Education</h2>
+          <ul
+            style="list-style: none; padding-left: 0.7rem; margin-top: 0.5rem"
+          >
+            <li style="margin-bottom: 10px">
+              <i
+                class="fas fa-graduation-cap"
+                style="
+                  font-size: 0.9rem;
+                  float: left;
+                  margin-top: 3px;
+                  margin-right: 8px;
+                "
+              ></i>
+              <div style="margin-left: 24px">
+                <div style="font-size: 0.95rem; color: #000">
+                  <strong
+                    >Masters in Management and Information Systems,
+                    2013–2014</strong
+                  >
+                </div>
+                <div style="font-size: 0.9rem; color: #777">
+                  Oklahoma State University, Stillwater, OK
+                </div>
+              </div>
+            </li>
+            <li style="margin-bottom: 10px">
+              <i
+                class="fas fa-graduation-cap"
+                style="
+                  font-size: 0.9rem;
+                  float: left;
+                  margin-top: 3px;
+                  margin-right: 8px;
+                "
+              ></i>
+              <div style="margin-left: 24px">
+                <div style="font-size: 0.95rem; color: #000">
+                  <strong
+                    >Bachelor of Technology in Mechanical Engineering,
+                    2005–2009</strong
+                  >
+                </div>
+                <div style="font-size: 0.9rem; color: #777">
+                  JNTU College of Engineering, Anantapur, India
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="icon-bullet">
+          <i class="fas fa-briefcase icon-lg"></i>
+          <div>
+            <div class="job-title">Principal Data Scientist</div>
+            <div class="job-location">Elsevier, Philadelphia, PA</div>
+            <div class="job-timeline">NOV 2024 – CURRENT</div>
+            <div class="job-description">
+              At Elsevier, I lead the end-to-end evaluation of GenAI products by
+              designing and deploying scalable, high-precision human-in-the-loop
+              and automated assessment pipelines. This includes building
+              rule-based engines and leveraging advanced techniques like
+              LLM-as-judge and machine learning classifiers to measure model
+              performance across multiple critical dimensions. I drive
+              cross-functional collaboration with product, engineering, and
+              leadership teams to ensure these systems deliver fast,
+              cost-effective, and reliable evaluation at scale. My work focuses
+              on enabling safe, high-quality AI development through robust,
+              continuously improving feedback loops and platformized evaluation
+              frameworks.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-briefcase icon-lg"></i>
-        <div>
-          <div class="job-title">DATA SCIENTIST</div>
-          <div class="job-location">Freddie Mac, McLean, Virginia</div>
-          <div class="job-timeline">JUN 2016 – JAN 2018</div>
-          <div class="job-description">
-            At Freddie Mac, I optimized the origination cycle time by implementing Optical Character Recognition (OCR) on digital documents. Additionally, I validated and improved the internal costing model for projecting loan defaults. Through segmentation analysis, I assessed the impact of changes in Loan-to-Value (LTV) buckets on various affordable lending programs. Furthermore, I investigated the influence of socioeconomic indicators on mortgage lending and refined automated valuation models for accuracy.
+        <div class="icon-bullet">
+          <i class="fas fa-briefcase icon-lg"></i>
+          <div>
+            <div class="job-title">Lead Data Scientist</div>
+            <div class="job-location">
+              Geisinger Medical Center, Danville, PA
+            </div>
+            <div class="job-timeline">FEB 2018 – NOV 2024</div>
+            <div class="job-description">
+              At Geisinger, I played a pivotal role at the intersection of
+              healthcare and Artificial Intelligence (AI), unraveling intricate
+              patterns within extensive datasets that included millions of
+              electronic health records, imaging files, and textual notes. Adept
+              at developing innovative solutions, I addressed data challenges
+              such as missing values, skewed distributions, and imbalances while
+              ensuring unbiased insights. My expertise lay in crafting
+              state-of-the-art predictive models geared towards early detection
+              of critical health conditions, significantly contributing to the
+              evolution of precision health. Moreover, I optimized the emergency
+              triage admissions workflow, collaborating seamlessly with
+              interdisciplinary teams comprising physicians, research
+              scientists, and stakeholders. Through partnerships with multiple
+              health systems, I extended the generalizability of predictive
+              models, operationalizing them within the healthcare system to
+              establish a feedback loop for continuous improvement, effectively
+              addressing model and concept drifts. Beyond model development, my
+              commitment to advancing AI in healthcare was underscored by the
+              publication of groundbreaking research in reputable healthcare
+              journals, furthering the integration of AI in healthcare
+              practices.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-briefcase icon-lg"></i>
-        <div>
-          <div class="job-title">SENIOR QUANTITATIVE ANALYST</div>
-          <div class="job-location">GE, Norwalk, Connecticut</div>
-          <div class="job-timeline">SEP 2014 – JUN 2016</div>
-          <div class="job-description">
-            At GE, I led a global team in building models to predict customer responses to campaigns. Identified key customer behavior patterns using advanced clustering and segmentation algorithms. Collaborated with marketing teams to make fact-based decisions and tracked campaign performance against ROI goals.
+        <div class="icon-bullet">
+          <i class="fas fa-briefcase icon-lg"></i>
+          <div>
+            <div class="job-title">Data Scientist</div>
+            <div class="job-location">Freddie Mac, McLean, VA</div>
+            <div class="job-timeline">JUN 2016 – JAN 2018</div>
+            <div class="job-description">
+              At Freddie Mac, I optimized the origination cycle time by
+              implementing Optical Character Recognition (OCR) on digital
+              documents. Additionally, I validated and improved the internal
+              costing model for projecting loan defaults. Through segmentation
+              analysis, I assessed the impact of changes in Loan-to-Value (LTV)
+              buckets on various affordable lending programs. Furthermore, I
+              investigated the influence of socioeconomic indicators on mortgage
+              lending and refined automated valuation models for accuracy.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-briefcase icon-lg"></i>
-        <div>
-          <div class="job-title">DATA ANALYST</div>
-          <div class="job-location">IBM, Kolkata, India</div>
-          <div class="job-timeline">JUN 2009 – JUL 2013</div>
-          <div class="job-description">
-            At IBM, I conducted statistical data analysis and automated monthly performance report generation. Managed data munging tasks and developed ad-hoc reports for quantitative analysis with descriptive statistics using SAS procedures.
+        <div class="icon-bullet">
+          <i class="fas fa-briefcase icon-lg"></i>
+          <div>
+            <div class="job-title">Senior Quantitative Analyst</div>
+            <div class="job-location">GE, Norwalk, CT</div>
+            <div class="job-timeline">SEP 2014 – JUN 2016</div>
+            <div class="job-description">
+              At GE, I led a global team in building models to predict customer
+              responses to campaigns. Identified key customer behavior patterns
+              using advanced clustering and segmentation algorithms.
+              Collaborated with marketing teams to make fact-based decisions and
+              tracked campaign performance against ROI goals.
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="icon-bullet">
+          <i class="fas fa-briefcase icon-lg"></i>
+          <div>
+            <div class="job-title">Data Analyst</div>
+            <div class="job-location">IBM, Kolkata, India</div>
+            <div class="job-timeline">JUN 2009 – JUL 2013</div>
+            <div class="job-description">
+              At IBM, I conducted statistical data analysis and automated
+              monthly performance report generation. Managed data munging tasks
+              and developed ad-hoc reports for quantitative analysis with
+              descriptive statistics using SAS procedures.
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="icon-bullet">
-        <i class="fas fa-table icon-lg"></i>
-        <div><strong>SME-labeled Eval Pipeline</strong> – Automated evaluation for LLM outputs using Likert-scale annotated datasets.</div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-table icon-lg"></i>
-        <div><strong>DSPy-based Prompt Optimization</strong> – Prompt refinement using labeled data and test-train split setup.</div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-table icon-lg"></i>
-        <div><strong>Healthcare GenAI Assistant</strong> – Internal assistant for clinical Q&A, backed by structured knowledge and retrieval.</div>
-      </div>
-    </section>
-    
-    <!-- Publications -->
-    <section id="research">
-      <h2>Publications</h2>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <a href="https://academic.oup.com/jamiaopen/article/8/3/ooaf054/8163901" target="_blank" class="pub-title">Reproducible generative artificial intelligence evaluation for health care: a clinician-in-the-loop approach</a><br />
-          JAMIA OPEN · 2025
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="icon-bullet">
+          <i class="fas fa-table icon-lg"></i>
+          <div>
+            <strong>SME-labeled Eval Pipeline</strong> – Automated evaluation
+            for LLM outputs using Likert-scale annotated datasets.
+          </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Machine Learning-Based Prediction of Stroke in Emergency Departments</span><br />
-          Therapeutic Advances in Neurological Disorders · 2024
+        <div class="icon-bullet">
+          <i class="fas fa-table icon-lg"></i>
+          <div>
+            <strong>DSPy-based Prompt Optimization</strong> – Prompt refinement
+            using labeled data and test-train split setup.
+          </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Machine learning-based Cerebral Venous Thrombosis diagnosis with clinical data</span><br />
-          Journal of Stroke and Cerebrovascular Diseases · 2024
+        <div class="icon-bullet">
+          <i class="fas fa-table icon-lg"></i>
+          <div>
+            <strong>Healthcare GenAI Assistant</strong> – Internal assistant for
+            clinical Q&A, backed by structured knowledge and retrieval.
+          </div>
         </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Defining the Age of Young Ischemic Stroke Using Data-Driven Approaches</span><br />
-          Journal of Clinical Medicine · 2023
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">The phenotypic spectrum of COL4A3 heterozygotes</span><br />
-          Kidney International Reports · 2023
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">An integrated pipeline for prediction of Clostridioides difficile infection</span><br />
-          Scientific Reports · 2023
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Social determinants of stroke hospitalization and mortality in United States’ counties</span><br />
-          Journal of Clinical Medicine · 2022
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Predicting Ischemic Stroke In Emergency Departments: Development And Validation Of Machine Learning Models</span><br />
-          Stroke · 2022
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Prediction of long-term stroke recurrence using machine learning models</span><br />
-          Journal of Clinical Medicine · 2021
-        </div>
-      </div>
-      <div class="icon-bullet">
-        <i class="fas fa-paperclip icon-lg"></i>
-        <div>
-          <span class="pub-title">Early detection of septic shock onset using interpretable machine learners</span><br />
-          Journal of Clinical Medicine · 2021
-        </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- Publications -->
+      <section id="research">
+        <h2>Publications</h2>
 
-  </div>
-</body>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1093/jamiaopen/ooaf054"
+              target="_blank"
+              class="pub-title"
+              >Reproducible generative artificial intelligence evaluation for
+              health care: a clinician-in-the-loop approach</a
+            ><br />JAMIA open · 2025
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1016/j.jstrokecerebrovasdis.2024.107848"
+              target="_blank"
+              class="pub-title"
+              >Machine learning-based Cerebral Venous Thrombosis diagnosis with
+              clinical data</a
+            ><br />Journal of Stroke and Cerebrovascular Diseases · 2024
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://journals.sagepub.com/doi/full/10.1177/17562864241239108#:~:text=https%3A//doi.org/10.1177/17562864241239108"
+              target="_blank"
+              class="pub-title"
+              >Machine Learning-Based Prediction of Stroke in Emergency
+              Departments</a
+            ><br />Therapeutic Advances in Neurological Disorders · 2024
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1038/s41598-023-41753-7"
+              target="_blank"
+              class="pub-title"
+              >An integrated pipeline for prediction of Clostridioides difficile
+              infection</a
+            ><br />Scientific Reports · 2023
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1016/j.ekir.2023.07.010"
+              target="_blank"
+              class="pub-title"
+              >Phenotypic spectrum of COL4A3 heterozygotes: A cohort study</a
+            ><br />Kidney International Reports · 2023
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm12072600"
+              target="_blank"
+              class="pub-title"
+              >Defining the Age of Young Ischemic Stroke Using a Data Driven
+              Approach</a
+            ><br />Journal of Clinical Medicine · 2023
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1161/hyp.80.suppl_1.P344"
+              target="_blank"
+              class="pub-title"
+              >Abstract P344: Effect Of Covid-19 Pandemic On Disparities In
+              Blood Pressure Control In A Regional Healthcare System In
+              Pennsylvania</a
+            ><br />Hypertension · 2023
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm11144101"
+              target="_blank"
+              class="pub-title"
+              >Social determinants of stroke hospitalization and mortality in
+              United States’ counties</a
+            ><br />Journal of Clinical Medicine · 2022
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1161/str.53.suppl_1.27"
+              target="_blank"
+              class="pub-title"
+              >Predicting Ischemic Stroke In Emergency Departments: Development
+              And Validation Of Machine Learning Models</a
+            ><br />Stroke · 2022
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm10235710"
+              target="_blank"
+              class="pub-title"
+              >Artificial Intelligence: A Shifting Paradigm in
+              Cardio-Cerebrovascular Medicine</a
+            ><br />Journal of Clinical Medicine · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3174/ajnr.A7271"
+              target="_blank"
+              class="pub-title"
+              >Outcomes of Mechanical Thrombectomy in the Early(<6-hour) and
+              Extended (≥6-hour) Time Window Based Solely on Noncontrast CT and
+              CT Angiography: A Propensity Score–Matched Cohort Study</a
+            ><br />American Journal of Neuroradiology · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1038/s41746-021-00518-0"
+              target="_blank"
+              class="pub-title"
+              >Imputation of missing values for electronic health record
+              laboratory data</a
+            ><br />npj Digital Medicine · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1016/j.jns.2021.117560"
+              target="_blank"
+              class="pub-title"
+              >Predicting short and long-term mortality after acute ischemic
+              stroke using EHR</a
+            ><br />Journal of the Neurological Sciences · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1007/s40615-020-00833-4"
+              target="_blank"
+              class="pub-title"
+              >Racial, Economic, and Health Inequality and COVID-19 Infection in
+              the United States</a
+            ><br />Journal of Racial and Ethnic Health Disparities · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1161/STROKEAHA.120.032927"
+              target="_blank"
+              class="pub-title"
+              >SARS-CoV-2 and Stroke Characteristics: A Report From the
+              Multinational COVID-19 Stroke Study Group</a
+            ><br />Stroke · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm10050931"
+              target="_blank"
+              class="pub-title"
+              >SARS-CoV-2 Is a Culprit for Some, but Not All Acute Ischemic
+              Strokes: A Report from the Multinational COVID-19 Stroke Study
+              Group</a
+            ><br />Journal of Clinical Medicine · 2021
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm10020301"
+              target="_blank"
+              class="pub-title"
+              >Early Detection of Septic Shock Onset Using Interpretable Machine
+              Learners</a
+            ><br />Journal of Clinical Medicine · 2020
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.3390/jcm10010103"
+              target="_blank"
+              class="pub-title"
+              >Increasing the Density of Laboratory Measures for Machine
+              Learning Applications</a
+            ><br />Journal of Clinical Medicine · 2020
+          </div>
+        </div>
+        <div class="icon-bullet">
+          <i class="fas fa-paperclip icon-lg"></i>
+          <div>
+            <a
+              href="https://doi.org/10.1177/1756286420971895"
+              target="_blank"
+              class="pub-title"
+            >
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
